@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page Interactivity Prototypes</title>
+    <meta charset="UTF-8"> 
+    <style type="text/css" media="screen">
+    /* =Reset */
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+    ol, ul { list-style: none; }
+    table { border-collapse: separate; border-spacing: 0; }
+    caption, th, td { text-align: left; font-weight: normal; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+    blockquote, q { quotes: "" ""; }
+    
+    /* =Fonts */
+    html, body { background: #fff; color: #666; }
+    body { font: 16px/1.6 'Trebuchet MS', Trebuchet, Verdana, sans-serif; }
+    h1, h2, h3, h4, h5, h6, legend, caption { font-weight: bold; line-height: 1.5; margin-bottom: .5em; }
+    h1 { font-size: 2em; border-bottom: 3px double #ccc; }
+    h2 { font-size: 1.2em; }
+    h3 { font-size: .9em; margin-bottom: -.25em; }
+    p, ol, ul { clear: both; line-height: 1.5; margin: 0 0 1.5em; padding: 0; }
+    li { margin: 0 0 .25em; }
+    li:before { content: "\2794\0020"; }
+    abbr, dfn, acronym { cursor: help; }
+    .note { margin-left: 1em; display: block; font-size: .875em; }
+    
+    html { background: #ddd; height: 100%; }
+    body { background: #fff; width: 80%; min-width: 500px; max-width: 900px; margin: 20px auto; padding: 30px; border: 2px solid; border-color: #dadada #cdcdcd #cdcdcd #dadada; }
+    
+    :link { color: #066; }
+    :visited { color: #666; }
+    :link:hover, :visited:hover { color: #000; }
+    :link:focus, :link:active, :visited:focus, :visited:active { background-color: #eee; outline: 1px solid #ccc; color: #066; }
+    
+    /* =Item Flags */
+    li.updated { background-color: #ffe; font-weight: bold; }
+    li.updated:before { content: "\2729\0020"; } /* star and space */
+    li.updated:after { content: " (updated)"; font-size: 90%; }
+    li.approved { background-color: #f3f3f3; }
+    li.approved a { text-decoration: line-through; }
+    li.approved:before { content: "\2714\0020"; } /* check and space */
+    li.approved:after { content: " (approved)"; font-size: 90%; }
+    li.inprogress a { text-decoration: none; }
+    li.inprogress:before { content: "\270F\0020"; }
+    li.inprogress:after { content: " (in progress)"; font-size: 90%; }
+    p.old { font-size: .9em; opacity: .9; }
+    </style>
+</head>
+<body>
+
+	<h1>Home Page Interactivity Prototypes</h1>
+  
+    <ul>
+        <li><a href="home1.html">Expanding blocks</a></li>
+        <li><a href="home3.html">Accordion pillars, full width</a></li>
+        <li><a href="home4.html">Accordion pillars, sliding over mission statement</a> <span class="note">(beware of wonky animation)</span></li>
+    </ul>
+  
+</body>
+</html>
