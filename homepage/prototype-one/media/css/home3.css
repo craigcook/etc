@@ -15,6 +15,42 @@
 .container { width: 940px; margin: 0 auto; }
 
 
+.mission {
+    width: 940px;
+	margin: 0 auto 40px;
+	font-family: 'Open Sans Light', sans-serif;
+	line-height: 1;
+	position: relative;
+}
+.mission h1 {
+	font-size: 72px;
+}
+.mission p {
+	font-size: 55px;
+	color: #666;
+}
+.mission p i {
+    font-style: normal;
+    color: firebrick;
+}
+
+.engage {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.engage .button {
+    background: linear-gradient(#0098ef, #007ec7);
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    color: #fff;
+}
+
+
 /** @Accordion *********/
 .pillars {
     position: relative;
