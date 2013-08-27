@@ -47,49 +47,7 @@
             </div>
           
             <ul class="accordion" id="accordion">
-                <li class="bg1">
-                    <div class="heading">Get Involved</div>
-                    <div class="bgDescription"></div>
-                    <div class="description">
-                        <h2>Join a worldwide movement.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.</p>
-                        <a href="#">more &rarr;</a>
-                    </div>
-                    <video class="video" tabindex="0" controls="controls" poster="//mozorg.cdn.mozilla.netmedia/img/mission/poster-mission.jpg" width="360" height="203">
-                        <source src="//videos-cdn.mozilla.net/brand/Mozilla_2011_Story.webm" type="video/webm">
-                        <source src="//videos-cdn.mozilla.net/brand/Mozilla_2011_Story.ogv" type="video/ogg; codecs=&#34;theora, vorbis&#34;">
-                        <source src="//videos-cdn.mozilla.net/brand/Mozilla_2011_Story.mp4" type="video/mp4">
-                    </video>
-                </li>
-                <li class="bg2">
-                    <div class="heading">Open Web</div>
-                    <div class="bgDescription"></div>
-                    <div class="description">
-                        <h2>Free as in speech, free as in beer.</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                            quae ab illo inventore veritatis et quasi architecto beatae vitae
-                            dicta sunt explicabo.</p>
-                        <a href="#">more &rarr;</a>
-                    </div>
-
-                </li>
-                <li class="bg3">
-                    <div class="heading">People</div>
-                    <div class="bgDescription"></div>
-                    <div class="description">
-                        <h2>Mozilla is made out of people!</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.</p>
-                        <a href="#">more &rarr;</a>
-                    </div>
-                </li>
-                <li class="bg4 bleft">
+                <li id="panel-four" class="bg4 bleft">
                     <div class="heading">Products</div>
                     <div class="bgDescription"></div>
                     <div class="description">
@@ -104,6 +62,47 @@
                         <li><a href="#">Firefox for Android</a></li>
                         <li><a href="#">Firefox OS</a></li>
                     </ul>
+                </li>
+                <li id="panel-three" class="bg3">
+                    <div class="heading">People</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>Mozilla is made out of people!</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.</p>
+                        <a href="#">more &rarr;</a>
+                    </div>
+                </li>
+                <li id="panel-two" class="bg2">
+                    <div class="heading">Open Web</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>Free as in speech, free as in beer.</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                            quae ab illo inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo.</p>
+                        <a href="#">more &rarr;</a>
+                    </div>
+                </li>
+                <li id="panel-one" class="bg1">
+                    <div class="heading">Get Involved</div>
+                    <div class="bgDescription"></div>
+                    <div class="description">
+                        <h2>Join a worldwide movement.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.</p>
+                        <a href="#">more &rarr;</a>
+                    </div>
+                    <video class="video" tabindex="0" controls="controls" poster="//mozorg.cdn.mozilla.netmedia/img/mission/poster-mission.jpg" width="290" height="180">
+                        <source src="//videos-cdn.mozilla.net/brand/Mozilla_2011_Story.webm" type="video/webm">
+                        <source src="//videos-cdn.mozilla.net/brand/Mozilla_2011_Story.ogv" type="video/ogg; codecs=&#34;theora, vorbis&#34;">
+                        <source src="//videos-cdn.mozilla.net/brand/Mozilla_2011_Story.mp4" type="video/mp4">
+                    </video>
                 </li>
             </ul>
           </section>
@@ -137,7 +136,6 @@
               </div>
 
               <div id="form-details">
-                <!-- This is bad, but a quick fix because we are pushing live in an hour -->
                 <div class="field field-country">
                   <label for="country" class="hidden">Country</label>
                   <select id="country" name="country">
@@ -206,22 +204,17 @@
 <script type="text/javascript">
 $(function() {
     $('#accordion > li').hover(
-        function () {
+        function() {
             var $this = $(this);
-            $('#accordion').stop().animate({'width':'100%'},300,function(){
-                $this.stop().animate({'width':'70%'},500);
-                $this.siblings().stop().animate({'width':'10%'})
-                $('.heading',$this).stop(true,true).fadeOut();
-                $('.bgDescription',$this).stop(true,true).slideDown(500);
-                $('.description, .video, .more-things',$this).stop(true,true).delay(250).fadeIn(400);
-            })
-            
+            $this.stop().animate({'width':'620px'},500);
+            $this.siblings().stop().animate({'width':'110px'},500);
+            $('.heading',$this).stop(true,true).fadeOut();
+            $('.bgDescription',$this).stop(true,true).slideDown(500);
+            $('.description, .video, .more-things',$this).stop(true,true).delay(250).fadeIn(400);          
         },
-        function () {
+        function() {
             var $this = $(this);
-//            $this.stop().animate({'width':'25%'},1000);
-            $('#accordion').stop().animate({'width':'620px'},300);
-            $('#accordion > li').stop().animate({'width':'25%'},1000);
+            $('#accordion > li').stop().animate({'width':'140px'},1000);
             $('.heading',$this).stop(true,true).fadeIn();
             $('.description, .video, .more-things',$this).stop(true,true).fadeOut(500);
             $('.bgDescription',$this).stop(true,true).slideUp(700);

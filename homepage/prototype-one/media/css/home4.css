@@ -69,15 +69,16 @@ ul.accordion {
     list-style: none;
     margin: 0;   
     position: absolute;
-    right: 0;
+    right: -20px;
+    left: -10px;
     top: 0;
-    width: 620px;
+    width: 100%;
 }
 ul.accordion li {
     margin: 0;
     padding: 0;
-    float: left;
-    width: 25%;
+    float: right;
+    width: 140px;
     height: 380px;
     display: block;
     position: relative;
@@ -151,7 +152,7 @@ ul.accordion li.bg1 .video {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 280px;
+    width: 220px;
     display: none;
 }
 .accordion .more-things li {
