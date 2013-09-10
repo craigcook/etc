@@ -67,7 +67,7 @@
 .engage {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 5px;
 }
 .engage .button {
     font-size: 18px;
@@ -93,7 +93,7 @@ a.button {
 
 /** @Accordion *********/
 .pillars {
-    width: 960px;
+    width: 980px;
     position: relative;
     height: 380px;
     margin: 0 auto 48px;
@@ -102,13 +102,14 @@ a.button {
 .accordion {
     list-style: none;
     position: absolute;
-    right: 0;
+    left: 2px;
     top: 0;
     width: 100%;
     overflow: hidden;
 }
+
 .accordion > li {
-    margin: 0;
+    margin: 0 0 0 -1px;
     padding: 0;
     float: left;
     width: 25%;
@@ -120,96 +121,118 @@ a.button {
 }
 
 /* MDN */
-.pillar-1 {
+#panel-mdn {
     background: #821117 url(../img/home/mdn-logo.png) 25% 10% no-repeat;
-    box-shadow: none;
 }
-.pillar-1 .pillar-title {
+#panel-mdn .panel-title {
+    background: #821117;
     background: linear-gradient(to top, rgba(130, 17, 23, .9) 60%, rgba(130, 17, 23, 0) 100%);
 }
-.pillar-1 .pillar-inner {
-    background: linear-gradient(to left, rgba(110, 14, 19, .9) 30%, rgba(110, 14, 19, 0) 80%);
+#panel-mdn .panel-content {
+    background: #821117;
+    background: linear-gradient(to left, rgba(110, 14, 19, .9) 50%, rgba(110, 14, 19, 0) 100%);
 }
 
 /* FxOS */
-.pillar-2 {
+#panel-fxos {
     background: #0095dd url(../img/home/fxos-fox.png) 28% 12% no-repeat;
 }
-.pillar-2 .pillar-title {
+#panel-fxos .panel-title {
+    background: #0095dd;
     background: linear-gradient(to top, rgba(0, 149, 221, .9) 60%, rgba(0, 149, 221, 0) 100%);
 }
-.pillar-2 .pillar-inner {
-    background: linear-gradient(to left, rgba(0, 83, 159, .9) 30%, rgba(0, 83, 159, 0) 80%);
+#panel-fxos .panel-content {
+    background: #0095dd;
+    background: linear-gradient(to left, rgba(0, 83, 159, .9) 50%, rgba(0, 83, 159, 0) 100%);
 }
 
 /* Flicks */
-.pillar-3 {
+#panel-flicks {
     background: #2a343a url(../img/home/flicks-logo.png) 20% 13% no-repeat;
 }
-.pillar-3 .pillar-title {
+#panel-flicks .panel-title {
+    background: #2a343a;
     background: linear-gradient(to top, rgba(42, 52, 58, .9) 60%, rgba(42, 52, 58, 0) 100%);
 }
-.pillar-3 .pillar-inner {
-    background: linear-gradient(to left, rgba(42, 52, 58, .9) 30%, rgba(42, 52, 58, 0) 80%);
+#panel-flicks .panel-content {
+    background: #2a343a;
+    background: linear-gradient(to left, rgba(42, 52, 58, .9) 50%, rgba(42, 52, 58, 0) 100%);
 }
 
 /* MozFest */
-.pillar-4 {
+#panel-mozfest {
     background: #37addd url(../img/home/mozfest-logo.jpg) 10% 10% no-repeat;
 }
-.pillar-4 .pillar-title {
-    background: linear-gradient(to top, rgba(55, 173, 221, .9) 60%, rgba(55, 173, 221, 0) 100%);
+#panel-mozfest .panel-title {
+    background: #34a3d0;
+    background: linear-gradient(to top, rgba(52, 163, 208, .9) 60%, rgba(52, 163, 208, 0) 100%);
 }
-.pillar-4 .pillar-inner {
-    background: linear-gradient(to left, rgba(55, 173, 221, .9) 30%, rgba(55, 173, 221, 0) 80%);
+#panel-mozfest .panel-content {
+    background: #34a3d0;
+    background: linear-gradient(to left, rgba(52, 163, 208, .9) 50%, rgba(52, 163, 208, 0) 100%);
 }
 
-.pillar-title {
-    background: rgba(0,0,0,.2);
-    padding: 40px 8%;
-    height: 40px;
-    letter-spacing: -.025em;
-    font-size: 20px;
+.panel-title {
+    background: rgba(0, 0, 0, .2);
     color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 84%;
+    font-size: 20px;
+    letter-spacing: -.025em;
     margin: 0;
+    padding: 40px 8%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: bottom .5s ease-out;
+    width: 84%;
+    height: 40px;
 }
-.pillar-title:after {
+.panel-title:after {
     content: ' »';
     white-space: nowrap;
 }
 
-.pillar-inner {
+.panel {
+    background: #999;
+}
+.panel:first-child {
+    box-shadow: none;
+}
+
+.panel-inner {
+    background: rgba(0, 0, 0, .15);
     position: absolute;
+    right: 0;
+    top: 0;
+    transition: background .5s ease-in-out;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.1);
+}
+.expanded .panel-inner {
+    background: transparent;
+    transition: background .5s ease-in-out;
+}
+.panel-content {
+    color: #fff;
+    display: none;
+    font-size: 18px;
+    height: 320px;
+    padding: 30px 30px 30px 100px;
+    position: absolute;
     top: 0;
     right: 0;
-    display: none;
-}
-.pillar-content {
-    font-size: 18px;
-    color: #fff;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
     width: 240px;
-    position: absolute;
-    right: 30px;
-    top: 30px;
 }
-.pillar-content h3 {
+.panel-content h3 {
     font-size: 28px;
     color: #fff;
     letter-spacing: -.025em;
 }
-.pillar-content .go {
+.panel-content .go {
     font-size: 14px;
 }
-.pillar-content .go:after {
+.panel-content .go:after {
     content: ' »';
     white-space: nowrap;
 }

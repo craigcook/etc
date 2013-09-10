@@ -39,47 +39,47 @@
 
         <main id="main-content" role="main">
           <section class="container mission">
-              <h1><img src="media/img/sandstone/header-mozilla-stone.png" alt="Mozilla"></h1>
+              <h1>We are Mozilla.</h1>
               <p><i>Doing good</i> is part of our code.</p>
               <p class="engage"><a href="#" class="button go">Get involved</a></p>
           </section>
 
           <section class="pillars">
-            <ul class="accordion" id="accordion">
-                <li class="pillar-1">
-                  <h2 class="pillar-title">Developer community</h2>
-                  <div class="pillar-inner">
-                    <div class="pillar-content">
-                      <h3>Join our developer community</h3>
-                      <p>Get docs and demos, tools and tutorials and everything related to the Open Web.</p>
-                      <p class="go">Visit the Mozilla Developer Network</p>
+            <ul class="accordion">
+                <li id="panel-mission" class="panel">
+                  <h2 class="panel-title">Explore our mission</h2>
+                  <div class="panel-inner">
+                    <div class="panel-content">
+                      <h3>Our principles guide us</h3>
+                      <p>We’re a global community of technologists, thinkers and builders working to keep the Internet alive and accessible.</p>
+                      <p class="go">Read more about our mission</p>
                     </div>
                   </div>
                 </li>
-                <li class="pillar-2">
-                  <h2 class="pillar-title">Look ahead</h2>
-                  <div class="pillar-inner">
-                    <div class="pillar-content">
+                <li id="panel-fxos" class="panel">
+                  <h2 class="panel-title">Look ahead</h2>
+                  <div class="panel-inner">
+                    <div class="panel-content">
                       <h3>Look ahead</h3>
                       <p>We're bringing more people to the Web in more ways and from more places than ever before.</p>
                       <p class="go">Learn more about Firefox OS</p>
                     </div>
                   </div>
                 </li>
-                <li class="pillar-3">
-                  <h2 class="pillar-title">See the flicks</h2>
-                  <div class="pillar-inner">
-                    <div class="pillar-content">
-                      <h3>See the winning flicks</h3>
-                      <p>Presenting the top entries from our community-generated video contest all about the power of mobile.</p>
-                      <p class="go">Watch the winners of Firefox Flicks</p>
+                <li id="panel-mdn" class="panel">
+                  <h2 class="panel-title">Join our community</h2>
+                  <div class="panel-inner">
+                    <div class="panel-content">
+                      <h3>Join our developer community</h3>
+                      <p>Get docs and demos, tools and tutorials and everything related to the Open Web.</p>
+                      <p class="go">Visit the Mozilla Developer Network</p>
                     </div>
                   </div>
                 </li>
-                <li class="pillar-4">
-                  <h2 class="pillar-title">Forge the future</h2>
-                  <div class="pillar-inner">
-                    <div class="pillar-content">
+                <li id="panel-mozfest" class="panel">
+                  <h2 class="panel-title">Forge the future</h2>
+                  <div class="panel-inner">
+                    <div class="panel-content">
                       <h3>Forge the future of the Web</h3>
                       <p>Learn from some of the most passionate thinkers and inventors from around the world.</p>
                       <p class="go">Come to the Mozilla Festival</p>
@@ -187,26 +187,26 @@
     <script src="media/js/nav-main-resp.js"></script>
     <script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
 
-<script type="text/javascript">
-$(function() {
-    $('#accordion > li').hover(
-        function() {
-            var $this = $(this);
-            $this.stop().addClass('expanded').animate({'width':'64%'},700);
-            $this.siblings().stop().removeClass('expanded').animate({'width':'11.9%'});
-            $('.pillar-title').fadeOut();
-            $('.pillar-inner',$this).stop(true,true).delay(250).fadeIn(400);
-        },
-        function() {
-            var $this = $(this);
-            $('.pillar-inner',$this).stop(true,true).fadeOut(200);
-            $('#accordion > li').stop().removeClass('expanded').animate({'width':'25%'},800, function(){
-              $('.pillar-title').fadeIn();
-            });
-        }
-    );
-});
-</script>
+    <script type="text/javascript">
+        $(function() {
+            $('.accordion > li').hover(
+              function() {
+                var $this = $(this);
+                $('.panel-title').stop().fadeOut(250);
+                $this.stop().addClass('expanded').animate({'width':'58%'},500);
+                $this.siblings().stop().animate({'width':'14%'},500);
+                $('.panel-content',$this).stop(true,true).delay(200).fadeIn();
+              },
+              function() {
+                var $this = $(this);
+                $('.accordion > li').stop().removeClass('expanded').animate({'width':'25%'},700, function(){
+                  $('.panel-title').fadeIn(250);
+                });
+                $('.panel-content',$this).stop(true,true).fadeOut(500);
+              }
+            );
+        });
+    </script>
 
   </body>
 </html>
