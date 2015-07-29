@@ -171,12 +171,12 @@
     clip-path: url(../img/shapes.svg#arc-up);
 }
 
-.boxes {
+.columns {
     display: flex;
     overflow: hidden;
 }
 
-.four-up .item {
+.four-up .column {
     width: 25%;
     margin: 0 20px;
     float: left;
@@ -185,7 +185,7 @@
     padding-bottom: 4em;
 }
 
-.item .cta {
+.section-how .cta {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -193,15 +193,27 @@
     font-size: 14px;
 }
 
-.item h3 {
+.section-how h3 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 1em;
 }
 
-.item h3 img {
+.section-how h3 img {
     display: block;
     margin: 0 auto 20px;
+}
+
+.js-ready .section-how .column {
+    opacity: .25;
+    transform: scale(.75);
+}
+
+.section-how .columns.visible .column {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+    transition-delay: .1s;
 }
 
 .box {
@@ -330,6 +342,29 @@
     border-radius: 100%;
 }
 
+.js-ready .section-community .person {
+    opacity: .25;
+    transform: translateY(10em);
+}
+
+.section-community .stories.visible .person {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.section-community .stories.visible .person-one {
+    transition-delay: .25s;
+}
+
+.section-community .stories.visible .person-two {
+    transition-delay: .5s;
+}
+
+.section-community .stories.visible .person-three {
+    transition-delay: .75s;
+}
+
 /* History */
 .section-history {
     background: #fff;
@@ -343,10 +378,23 @@
 
 .history-slide {
     text-align: center;
+    overflow: hidden;
 }
 
 .history-slide .more {
     margin-top: 40px;
+}
+
+.js-ready .section-history .history-slide img {
+    opacity: .25;
+    transform: translateX(150%);
+}
+
+.section-history .history-slide.visible img {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform .75s ease-in-out, opacity 1s ease-in-out;
+    transition-delay: .1s;
 }
 
 /* Newsletter form */
