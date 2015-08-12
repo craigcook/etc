@@ -109,8 +109,7 @@ h1, h2, h3, h4, h5, h6, .huge, .large {
     font-family: 'Fira Sans Light', sans-serif;
     font-weight: normal;
     display: block;
-    margin: 0 0 .15em;
-    color: #484848;
+    margin: 0 0 .5em;
     letter-spacing: -.035em;
 }
 
@@ -160,12 +159,7 @@ small {
 
 /* General content */
 p, ul, ol, dl, hgroup, blockquote, pre {
-    margin: 0 0 20px;
-}
-
-blockquote {
-    padding: 0 20px;
-    border-left: 1px solid #d6d6d6;
+    margin: 0 0 1.5em;
 }
 
 ul.unstyled li,
@@ -253,6 +247,319 @@ object {
     position: relative;
 }
 
+/* Blocks */
+.section {
+    margin: 0 auto;
+    padding: 60px 0;
+    position: relative;
+}
+
+.section:focus,
+.section:target {
+    outline: 0;
+}
+
+.container {
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.container:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.section-intro,
+.section-title {
+    text-align: center;
+}
+
+.section-intro {
+    font-size: 22px;
+    margin: 0 80px 40px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0 0 40px;
+}
+
+.page-intro {
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.background-video {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    filter: saturate(50%) grayscale(50%);
+}
+
+
+/* Header */
+#masthead {
+    background: #c33b32;
+    color: #fff;
+}
+
+#masthead .container {
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+
+.site-logo {
+    color: #fff;
+    margin: 10px 0 0;
+    text-shadow: none;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: normal;
+    position: absolute;
+}
+
+/* Nav */
+.nav-main {
+    float: left;
+    margin: 5px 0 0 220px;
+}
+
+.nav-main ul {
+    list-style: none;
+    margin: 0;
+}
+
+.nav-main li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-main .active {
+    border-bottom: 3px solid #fff;
+}
+
+.nav-main a:link,
+.nav-main a:visited {
+    color: #fff;
+    display: inline-block;
+    padding: 1em 20px;
+}
+
+.nav-section {
+    border-bottom: 2px solid rgba(255,255,255,.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    font-size: 14px;
+    text-align: left;
+}
+
+.nav-section .container {
+    padding: 0;
+}
+
+.nav-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 220px;
+}
+
+.nav-section li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-section a:link,
+.nav-section a:visited {
+    color: #fff;
+    display: inline-block;
+    padding: 1em 20px;
+}
+
+.nav-section .active {
+    border-bottom: 2px solid #fff;
+    margin-bottom: -2px;
+}
+
+/* Intro hero */
+.page-intro {
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.page-intro .page-title {
+    color: #fff;
+    font-style: italic;
+    font-size: 72px;
+    margin: 80px 80px 120px;
+}
+
+.page-intro .page-title b {
+    font-family: 'Fira Sans';
+    font-weight: bold;
+}
+
+.page-intro .video-overlay {
+    background: rgba(0, 50, 105, .8);
+}
+
+.page-intro .container {
+    z-index: 10;
+}
+
+/* Newsletter form */
+.newsletter-form {
+    position: relative;
+    background: #002e43 url(../img/footer-fpo.jpg) center bottom no-repeat;
+    color: #fff;
+    padding: 40px 0 60px;
+    overflow: hidden;
+}
+
+.newsletter-form .container {
+    z-index: 10;
+}
+
+.newsletter-form h3 {
+    color: #fff;
+    text-shadow: none;
+}
+
+.newsletter-form li {
+    width: 30%;
+    float: left;
+    list-style: none;
+    margin: 0 10px .25em 0;
+}
+
+.newsletter-form label {
+    display: block;
+}
+
+.newsletter-form input {
+    width: 90%;
+    font-size: 16px;
+    padding: .45em 10px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: .25em;
+}
+
+.newsletter-form button {
+    margin-top: 1.4em;
+    width: 90%;
+    font-size: 16px;
+    border: 0;
+}
+
+.newsletter-form .video-overlay {
+    background: rgba(0, 50, 105, .8);
+}
+
+.newsletter-form .background-video {
+    display: none;
+}
+
+/* Footer */
+#site-info {
+    background: #00142a;
+    color: rgba(255,255,255,.75);
+    position: relative;
+    padding: 20px 0;
+}
+
+#site-info:before {
+    content: '';
+    display: block;
+    height: 30px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    background: inherit;
+    clip-path: url(../img/shapes.svg#arc-down);
+    z-index: 12;
+}
+
+#site-info .logo {
+    text-shadow: none;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: normal;
+}
+
+#site-info a {
+    color: rgba(255,255,255,.75);
+}
+
+#site-info .col {
+    width: 220px;
+    float: left;
+    margin: 0 10px;
+}
+
+#site-info ul {
+    list-style: none;
+}
+
+#site-info .license {
+    font-size: 14px;
+    color: rgba(255,255,255,.5);
+}
+
+.factoid {
+    background: rgba(100,100,100,.2);
+    width: 220px;
+    float: right;
+    padding: 30px;
+    margin-top: -20px;
+    clip-path: url(../img/shapes.svg#box);
+}
+
+.factoid h3 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.factoid p {
+    margin: 0;
+}
+
+
 
 /* Tablet Layout - 760px */
 @media only screen and (min-width: 760px) and (max-width: 1000px) {
@@ -265,55 +572,12 @@ object {
 /* Mobile Layout - 320px */
 @media only screen and (max-width: 760px) {
 
-    .huge,
-    .huge h1,
-    .large,
-    .large h1 {
-        font-size: 48px;
-    }
 
-    h1,
-    .large h2 {
-        font-size: 32px;
-    }
-
-    h2,
-    .billboard h2 {
-        font-size: 28px;
-    }
-
-    h3 {
-        font-size: 24px;
-    }
-
-    h4 {
-        font-size: 16px;
-    }
-
-    h5 {
-        font-size: 14px;
-    }
 
 }
 
 
-/* Wide Mobile Layout - 480px
- *
- * For slightly wider viewports (e.g. smartphones in landscape mode),
- * we keep the 40px column but gain two more columns, for a total of 7.
- *
- * The outer page gutter is still 20px for a total page width of 440px.
- *
- * width = (40px * columns) + (20px * (columns - 1))
- *
- * 1 column span - width: 40px;
- * 2 column span - width: 100px;
- * 3 column span - width: 160px;
- * 4 column span - width: 220px;
- * 5 column span - width: 280px;
- * 6 column span - width: 340px;
- * 7 column span - width: 400px;
- */
+/* Wide Mobile Layout - 480px */
 @media only screen and (min-width: 480px) and (max-width: 760px) {
 
 
