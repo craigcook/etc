@@ -1,0 +1,415 @@
+@import 'tabzilla.css';
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+/****************************************************************************/
+/****************************************************************************/
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Regular'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Bold'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Italic'), url('../fonts/OpenSans-Italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Italic'), url('../fonts/OpenSans-Italic-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  src: local('Open Sans Light'), url('../fonts/OpenSans-Light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  src: local('Open Sans Light'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  src: local('Open Sans Light'), url('../fonts/OpenSans-LightItalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+/* Reset browser defaults */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+hgroup,
+menu,
+footer,
+header,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+article,
+main,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+a img {
+  border: 0;
+}
+/* Basic Colors, Text, Links */
+html {
+  background: #fff;
+}
+body {
+  font: 14px/1.5 'Open Sans', sans-serif;
+  color: #333;
+  background: #fff;
+}
+#outer-wrapper {
+  position: relative;
+  border-top: 2px solid #fff;
+  background: #fff;
+}
+a:link,
+a:visited {
+  color: #0096dd;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #0073aa;
+  text-decoration: underline;
+}
+/* Headings and text sizes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.huge,
+.large {
+  line-height: 1.1;
+  font-family: 'Open Sans Light', sans-serif;
+  font-weight: normal;
+  display: block;
+  margin: 0 0 .5em;
+  letter-spacing: -0.035em;
+}
+.huge,
+.huge h1 {
+  font-size: 108px;
+}
+.large,
+.large h1 {
+  font-size: 72px;
+}
+h1,
+.huge h2,
+.large h2,
+.billboard h2 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+.small,
+small {
+  font-size: 12px;
+  line-height: 1.3;
+}
+/* General content */
+p,
+ul,
+ol,
+dl,
+hgroup,
+blockquote,
+pre {
+  margin: 0 0 1.5em;
+}
+ul.unstyled li,
+ol.unstyled li {
+  list-style-type: none;
+  margin-left: 0;
+}
+ul.unstyled li li,
+ol.unstyled li li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+li > ul {
+  margin-bottom: 0;
+}
+li {
+  margin-left: 20px;
+}
+dl dt {
+  font: normal 32px/1 'Open Sans', sans-serif;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+dl dd {
+  margin-bottom: 40px;
+}
+pre,
+code {
+  color: #666;
+  font-size: 14px;
+}
+.center {
+  text-align: center;
+}
+img,
+video,
+object {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+.button {
+  background: #00a7e0;
+  padding: .5em 30px;
+  color: #fff;
+  border-radius: .25em;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.button:link,
+.button:visited,
+.button:active {
+  color: #fff;
+}
+.button-hollow {
+  background: transparent;
+  border: 1px solid #00a7e0;
+  color: #00a7e0;
+  border-radius: .25em;
+  padding: .5em 30px;
+  display: inline-block;
+}
+.go:after {
+  content: "\00A0\25B8";
+  /* nbsp right-arrow */
+  white-space: nowrap;
+}
+/* Blocks */
+.section {
+  margin: 0 auto;
+  position: relative;
+  zoom: 1;
+}
+.section:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+.section:focus,
+.section:target {
+  outline: 0;
+}
+.container {
+  width: 960px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  zoom: 1;
+}
+.container:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+/* Header */
+#page-header {
+  margin-top: -39px;
+  background: #c33b32;
+  color: #fff;
+}
+#page-header h1,
+#page-header h2 {
+  position: relative;
+  margin-left: 150px;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(72, 72, 72, 0.3);
+}
+#page-header h1 {
+  font-size: 64px;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  left: -0.05em;
+}
+#page-header h2 {
+  font-size: 34px;
+  font-size: 2.125rem;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.intro {
+  font-size: 18px;
+}
+/* Footer */
+#colophon {
+  color: #666;
+  padding: 40px 0;
+  font-size: .875em;
+  line-height: 1.285;
+  background: #fff;
+  width: 100%;
+  margin: 1em 0 0;
+}
+#colophon .row {
+  width: 960px;
+  margin: 0 auto;
+}
+#colophon .row:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+#colophon .footer-logo,
+#colophon .footer-license,
+#colophon .footer-nav {
+  float: left;
+  margin: 0 10px;
+}
+#colophon .footer-logo {
+  width: 300px;
+}
+#colophon .footer-license {
+  width: 220px;
+}
+#colophon .footer-nav {
+  width: 140px;
+}
+#colophon a,
+#colophon a:link,
+#colophon a:visited {
+  color: #0096dd;
+}
+#colophon a:hover,
+#colophon a:active {
+  color: #0073aa;
+}
+#colophon p {
+  margin-bottom: 10px;
+}
+.footer-nav {
+  font-family: 'Open Sans', sans-serif;
+}
+.footer-nav li {
+  list-style-type: none;
+  margin: 0 0 2px 0;
+}
+/* Tablet Layout - 760px */
+/* Mobile Layout - 320px */
+/* Wide Mobile Layout - 480px */
+/*# sourceMappingURL=base.css.map */
