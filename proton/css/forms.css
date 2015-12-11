@@ -1,0 +1,29 @@
+/*
+    Styles for forms
+*/
+
+legend {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 0 0 .25em;
+    padding: 0 10px;
+}
+
+input:not([type~='radio checkbox']),
+textarea {
+    border: 2px solid rgba(0, 0, 0, .1);
+    padding: .5em 10px;
+    max-width: 100%;
+}
+
+input + .button {
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+}
+
+
