@@ -1,4 +1,7 @@
-/* @Reset */
+/*
+    Reset most browser defaults.
+*/
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 audio, video, canvas { display: inline-block; }
 

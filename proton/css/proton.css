@@ -1,6 +1,10 @@
 /*
     Base styles for the Proton framework.
+
     This style sheet imports the others. It's bad for performance but good for reference.
+    Use this as a starting point for your particular project, importing the only pieces
+    you actually need and tailoring the global layout (widths and breakpoints) to suit
+    your needs.
 */
 
 @import url('reset.css');
