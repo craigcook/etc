@@ -1,0 +1,355 @@
+@import url('reset.css');
+
+/* Fonts */
+@font-face {
+    font-family: 'Desyrel';
+    src: url('../fonts/desyrel-webfont.woff') format('woff'),
+         url('../fonts/desyrel-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Harabara Hand';
+    src: url('../fonts/HarabaraHand-webfont.woff') format('woff'),
+         url('../fonts/HarabaraHand-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HVD Comic Serif';
+    src: url('../fonts/HVD_Comic_Serif_Pro-webfont.woff') format('woff'),
+         url('../fonts/HVD_Comic_Serif-Pro-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* General styles */
+body {
+    background: #626260 url('../img/bg-body.jpg') center top;
+    color: #000;
+    font: 100%/1.5 'Avenir', 'Candara', sans-serif;
+    padding: 0 20px;
+}
+
+.page:after,
+.section:after,
+.content:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.content {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.page {
+    background: #fff url('../img/bg-page.jpg') center top;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);
+    margin: 20px auto;
+    max-width: 1200px;
+    min-width: 280px;
+    padding: 40px;
+}
+
+.main-section {
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.tagline {
+    clear: both;
+    color: #277660;
+    font: normal 3rem/1.1 'HVD Comic Serif', sans-serif;
+    margin: 60px 40px;
+    text-align: right;
+    text-shadow: 2px 3px 0 rgba(128, 221, 205, .35);
+}
+
+.footnote {
+    color: #888;
+    font-size: .68rem;
+    font-style: italic;
+    margin: 0 0 -2em;
+}
+
+
+/* Header */
+.page-header {
+    background: #3bac8f url('../img/bg-head.png') center top;
+    margin: -40px -40px 0;
+    padding: 40px 40px 60px;
+}
+
+.page-title {
+    color: #fff;
+    font: normal 4rem/1.2 'HVD Comic Serif', sans-serif;
+    margin: 0 -10px;
+    padding: 40px 0 60px;
+    text-align: center;
+    text-shadow: 3px 4px 0 rgba(39, 118, 96, .8);
+}
+
+.page-intro {
+    background: linear-gradient(to top, #fff9d9 30%, #fffcef 70%);
+    border-radius: 50px;
+    border: 6px double #ffcf65;
+    box-shadow: 3px 4px 0 rgba(39, 118, 96, .8);
+    color: #277660;
+    float: left;
+    padding: 30px 30px 10px;
+    width: 60%;
+}
+
+.page-intro a {
+    text-decoration: none;
+}
+
+.page-intro .cite {
+    font-style: italic;
+    text-align: right;
+}
+
+.holly-headshot {
+    background: #fff;
+    border-radius: 50%;
+    border: 6px double #ffcf65;
+    box-shadow: 3px 4px 0 rgba(39, 118, 96, .8);
+    float: right;
+    margin-top: -10px;
+    width: 25%;
+}
+
+.main-section {
+    background: inherit;
+    clip-path: url(../img/shapes.svg#wave);
+    margin-top: -50px;
+    padding-top: 100px;
+}
+
+
+
+/* Pictures */
+.pic {
+    background: rgba(128, 221, 205, .25);
+    clear: left;
+    clip-path: url(../img/shapes.svg#box);
+    float: left;
+    margin: 0 2%;
+    padding: 30px;
+    width: 45%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.pic.alt,
+.note.alt {
+    clear: right;
+    float: right;
+}
+
+.pic a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pic img {
+    border: 1px solid rgba(0, 0, 0, .1);
+    clip-path: url(../img/shapes.svg#box);
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.pic figcaption {
+    text-align: center;
+}
+
+.pic .caption {
+    font-size: .75rem;
+    font-style: italic;
+    margin: .5em 0 0;
+    text-align: center;
+}
+
+.pic .title {
+    color: #277660;
+    font: normal 2rem/1.1 'HVD Comic Serif', sans-serif;
+    margin: 0;
+    text-shadow: -1px -2px 0 #fff;
+}
+
+.pic-one {
+    transform: rotate(-3deg);
+}
+
+.pic-two {
+    transform: rotate(4deg) translate(0, 50px);
+}
+
+.pic-three {
+    clear: left;
+    transform: rotate(3deg) translate(10px, -80px);
+}
+
+.pic-four {
+    transform: rotate(-4.5deg) translate(-10px, -90px);
+}
+
+.pic-five {
+    transform: rotate(-4deg) translate(0, -50px);
+}
+
+.pic-six {
+    transform: rotate(5.5deg) translate(-20px, -90px);
+}
+
+.pic-seven {
+    width: 35%;
+    margin-left: 1%;
+    transform: rotate(3deg) translate(0, -30px);
+}
+
+.pic-eight {
+    width: 40%;
+    transform: rotate(-4deg) translate(0, -40px);
+}
+
+.pic-nine {
+    transform: rotate(-6deg);
+}
+
+.pic-ten {
+    transform: rotate(3.5deg) translate(-20px, -60px);
+}
+
+.pic-eleven {
+    transform: rotate(4deg) translate(0, -30px);
+}
+
+.pic-twelve {
+    transform: rotate(-5deg);
+}
+
+.pic-thirteen {
+    clear: both;
+    float: none;
+    margin: 0 auto 40px;
+    width: 100%;
+}
+
+
+
+/* Notes */
+.note {
+    float: left;
+    margin: 20px 2%;
+    text-align: center;
+    width: 46%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.note-one {
+    margin-top: -40px;
+}
+
+.note-one img {
+    max-width: 60%;
+}
+
+.note-two {
+    color: #303e92;
+    font: 1.85rem/1.1 'Harabara Hand', cursive;
+    transform: rotate(9deg) translate(-30px, -60px);
+}
+
+.note .salutation {
+    display: block;
+    text-align: left;
+}
+
+.note cite {
+    display: block;
+    font-size: 2.2rem;
+    margin: -1em 0 0 50px;
+}
+
+.note-three {
+    margin: 60px -3% 0;
+    transform: rotate(-6.5deg);
+    width: 20%;
+}
+
+.note-three img {
+    max-width: 110%;
+}
+
+.note-four {
+    color: #79552e;
+    font: 1.35rem/1.1 'Desyrel', cursive;
+    transform: rotate(-2deg) translate(20px, -40px);
+}
+
+
+/* Cards */
+.card {
+    clear: both;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.card img {
+    background: rgba(128, 221, 205, .25);
+    max-width: 90%;
+    padding: 20px;
+}
+
+
+/* Boxes stack in small viewports */
+@media screen and (max-width: 60rem) {
+    .pic,
+    .note,
+    .card,
+    .pic.alt,
+    .note.alt {
+        float: none;
+        margin: 20px auto;
+        max-width: 90%;
+        width: auto;
+    }
+
+    .page-intro,
+    .holly-headshot {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+
+    .holly-headshot {
+        display: block;
+        margin-top: 30px;
+        max-width: 50%;
+    }
+}
+
+/* High resolution displays get higher quality images */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
+    body {
+        background-image: url('../img/bg-body-hr.jpg');
+        background-size: 500px 500px;
+    }
+
+    .page-header {
+        background-image: url('../img/bg-head-hr.png');
+        background-size: 200px 200px;
+    }
+}
