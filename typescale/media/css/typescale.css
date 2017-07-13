@@ -1,0 +1,165 @@
+.huge {
+  font-size: 48px;
+  font-size: 2.66667rem; }
+  @media screen and (min-width: 760px) {
+    .huge {
+      font-size: 60px;
+      font-size: 3.33333rem; } }
+  @media screen and (min-width: 1000px) {
+    .huge {
+      font-size: 72px;
+      font-size: 4rem; } }
+  .huge:after {
+    content: ' 48px';
+    font-weight: normal; }
+    @media screen and (min-width: 760px) {
+      .huge:after {
+        content: ' 60px'; } }
+    @media screen and (min-width: 1000px) {
+      .huge:after {
+        content: ' 72px'; } }
+
+.l1 {
+  font-size: 36px;
+  font-size: 2rem; }
+  @media screen and (min-width: 760px) {
+    .l1 {
+      font-size: 48px;
+      font-size: 2.66667rem; } }
+  @media screen and (min-width: 1000px) {
+    .l1 {
+      font-size: 60px;
+      font-size: 3.33333rem; } }
+  .l1:after {
+    content: ' 36px';
+    font-weight: normal; }
+    @media screen and (min-width: 760px) {
+      .l1:after {
+        content: ' 48px'; } }
+    @media screen and (min-width: 1000px) {
+      .l1:after {
+        content: ' 60px'; } }
+
+.l2 {
+  font-size: 24px;
+  font-size: 1.33333rem; }
+  @media screen and (min-width: 760px) {
+    .l2 {
+      font-size: 36px;
+      font-size: 2rem; } }
+  @media screen and (min-width: 1000px) {
+    .l2 {
+      font-size: 48px;
+      font-size: 2.66667rem; } }
+  .l2:after {
+    content: ' 24px';
+    font-weight: normal; }
+    @media screen and (min-width: 760px) {
+      .l2:after {
+        content: ' 36px'; } }
+    @media screen and (min-width: 1000px) {
+      .l2:after {
+        content: ' 48px'; } }
+
+.l3 {
+  font-size: 18px;
+  font-size: 1rem; }
+  @media screen and (min-width: 760px) {
+    .l3 {
+      font-size: 24px;
+      font-size: 1.33333rem; } }
+  @media screen and (min-width: 1000px) {
+    .l3 {
+      font-size: 36px;
+      font-size: 2rem; } }
+  .l3:after {
+    content: ' 18px';
+    font-weight: normal; }
+    @media screen and (min-width: 760px) {
+      .l3:after {
+        content: ' 24px'; } }
+    @media screen and (min-width: 1000px) {
+      .l3:after {
+        content: ' 36px'; } }
+
+.l4 {
+  font-size: 16px;
+  font-size: 0.88889rem; }
+  @media screen and (min-width: 760px) {
+    .l4 {
+      font-size: 18px;
+      font-size: 1rem; } }
+  @media screen and (min-width: 1000px) {
+    .l4 {
+      font-size: 24px;
+      font-size: 1.33333rem; } }
+  .l4:after {
+    content: ' 16px';
+    font-weight: normal; }
+    @media screen and (min-width: 760px) {
+      .l4:after {
+        content: ' 18px'; } }
+    @media screen and (min-width: 1000px) {
+      .l4:after {
+        content: ' 24px'; } }
+
+.l5 {
+  font-size: 14px;
+  font-size: 0.77778rem; }
+  @media screen and (min-width: 760px) {
+    .l5 {
+      font-size: 16px;
+      font-size: 0.88889rem; } }
+  @media screen and (min-width: 1000px) {
+    .l5 {
+      font-size: 18px;
+      font-size: 1rem; } }
+  .l5:after {
+    content: ' 14px';
+    font-weight: normal; }
+    @media screen and (min-width: 760px) {
+      .l5:after {
+        content: ' 16px'; } }
+    @media screen and (min-width: 1000px) {
+      .l5:after {
+        content: ' 18px'; } }
+
+.l6 {
+  font-size: 14px;
+  font-size: 0.77778rem; }
+  @media screen and (min-width: 760px) {
+    .l6 {
+      font-size: 16px;
+      font-size: 0.88889rem; } }
+  .l6:after {
+    content: ' 14px';
+    font-weight: normal; }
+    @media screen and (min-width: 760px) {
+      .l6:after {
+        content: ' 16px'; } }
+
+.small {
+  font-size: 12px;
+  font-size: 0.66667rem; }
+  @media screen and (min-width: 760px) {
+    .small {
+      font-size: 14px;
+      font-size: 0.77778rem; } }
+  .small:after {
+    content: ' 12px';
+    font-weight: normal; }
+    @media screen and (min-width: 760px) {
+      .small:after {
+        content: ' 14px'; } }
+
+.x-small {
+  font-size: 12px;
+  font-size: 0.66667rem; }
+  .x-small:after {
+    content: ' 12px';
+    font-weight: normal; }
+
+.os {
+  font-family: "Open Sans", X-LocaleSpecific, sans-serif; }
+
+/*# sourceMappingURL=typescale.css.map */
